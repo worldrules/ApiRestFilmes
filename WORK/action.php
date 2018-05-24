@@ -13,9 +13,14 @@ if(isset($_POST['action'])) {
         $form_data = array(
 
             'filme' => $_POST['filme'],
-            'diretor'  => $_POST['diretor']
+            'diretor'  => $_POST['diretor'],
+            'genero'  => $_POST['genero'],
+            'avaliacao'  => $_POST['avaliacao'],
+            'sinopse'  => $_POST['sinopse'],
+
 
         );
+
 
         $api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=insert";
 
@@ -41,6 +46,7 @@ if(isset($_POST['action'])) {
             }
         }
     }
+
     if($_POST["action"] == 'fetch_single')
     {
         $id = $_POST["id"];
@@ -56,6 +62,9 @@ if(isset($_POST['action'])) {
         $form_data = array(
             'filme' => $_POST['filme'],
             'diretor'  => $_POST['diretor'],
+            'genero'  => $_POST['genero'],
+            'avaliacao'  => $_POST['avaliacao'],
+            'sinopse'  => $_POST['sinopse'],
             'id'   => $_POST['hidden_id']
         );
         $api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=update";

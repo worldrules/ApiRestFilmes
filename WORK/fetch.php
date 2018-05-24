@@ -27,6 +27,9 @@ if(count($result) > 0) {
   <tr>
    <td>'.$row->filme.'</td>
    <td>'.$row->diretor.'</td>
+   <td>'.$row->genero.'</td>
+   <td>'.$row->avaliacao.'</td>
+   <td>'.$row->sinopse.'</td>
    <td><button type="button" name="edit" class="btn btn-warning btn-xs edit" id="'.$row->id.'">Edit</button></td>
    <td><button type="button" name="delete" class="btn btn-danger btn-xs delete" id="'.$row->id.'">Delete</button></td>
   </tr>

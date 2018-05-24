@@ -5,15 +5,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--<!--slider-->
+<!--    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />-->
+<!--    <script type="text/javascript" src="../engine1/jquery.js"></script>-->
+
 </head>
 <body>
+
+
+
+
 <div class="container">
     <br />
 
     <h3 align="center">Best Films World Rules</h3>
+
     <br />
     <div align="right" style="margin-bottom:5px;">
-        <button type="button" name="add_button" id="add_button" class="btn btn-success btn-xs">Add</button>
+        <button type="button" name="add_button" id="add_button" class="btn btn-success btn-xs">Adicionar</button>
     </div>
 
     <div class="table-responsive">
@@ -22,14 +32,21 @@
             <tr>
                 <th>Filme</th>
                 <th>Diretor</th>
+                <th>Gênero</th>
+                <th>Avaliação</th>
+                <th>Sinopse</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+
+            </tbody>
+
         </table>
     </div>
 </div>
+
 </body>
 </html>
 
@@ -50,16 +67,35 @@
                         <label>Coloque o nome do Diretor</label>
                         <input type="text" name="diretor" id="diretor" class="form-control" />
                     </div>
+                    <div class="form-group">
+                        <label>Coloque o nome do Genero</label>
+                        <input type="text" name="genero" id="genero" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Sua Avaliação</label>
+                        <input type="number" name="avaliacao" id="avaliacao" class="form-control"/>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Sinopse</label>
+                        <input type="text" name="sinopse" id="sinopse" class="form-control" />
+                    </div>
+
+
+
+
                 </div>
                 <div class="modal-footer">
+
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="hidden" name="action" id="action" value="insert" />
                     <input type="submit" name="button_action" id="button_action" class="btn btn-info" value="Insert" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
             </form>
         </div>
     </div>
+
 </div>
 
 
@@ -134,9 +170,12 @@
                     $('#hidden_id').val(id);
                     $('#filme').val(data.filme);
                     $('#diretor').val(data.diretor);
+                    $('#genero').val(data.genero);
+                    $('#avaliacao').val(data.avaliacao);
+                    $('#sinopse').val(data.sinopse);
                     $('#action').val('update');
                     $('#button_action').val('Update');
-                    $('.modal-title').text('Edit Data');
+                    $('.modal-title').text('Editar Filme');
                     $('#apicrudModal').modal('show');
                 }
             })

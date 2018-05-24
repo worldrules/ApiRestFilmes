@@ -8,8 +8,6 @@
 
 class API
 {
-
-
     private $connect = '';
 
     function __construct()
@@ -23,6 +21,7 @@ class API
 
         $this->connect = new PDO("mysql:host=localhost;dbname=filmes", "root", "");
     }
+
 
     public function fetch_all()
     {
@@ -48,12 +47,16 @@ class API
         if (isset($_POST["filme"])) {
             $form_data = array(
                 ':filme' => $_POST["filme"],
-                ':diretor' => $_POST["diretor"]
+                ':diretor' => $_POST["diretor"],
+                ':genero' => $_POST["genero"],
+                ':avaliacao' => $_POST["avaliacao"],
+                ':sinopse' => $_POST["sinopse"]
+
             );
             $query = "
    INSERT INTO sample 
-   (filme, diretor) VALUES 
-   (:filme, :diretor)
+   (filme, diretor, genero, avaliacao, sinopse) VALUES 
+   (:filme, :diretor, :genero, :avaliacao, :sinopse)
    ";
             $statement = $this->connect->prepare($query);
             if ($statement->execute($form_data)) {
@@ -86,6 +89,9 @@ class API
 
                 $data['filme'] = $row['filme'];
                 $data['diretor'] = $row['diretor'];
+                $data['genero'] = $row['genero'];
+                $data['avaliacao'] = $row['avaliacao'];
+                $data['sinopse'] = $row['sinopse'];
             }
             return $data;
         }
@@ -99,13 +105,18 @@ class API
 
         if (isset($_POST["filme"])) {
             $form_data = array(
-                ':filme' => $_POST['filme'],
-                ':diretor' => $_POST['diretor'],
+                ':filme' => $_POST["filme"],
+                ':diretor' => $_POST["diretor"],
+                ':genero' => $_POST["genero"],
+                ':avaliacao' => $_POST["avaliacao"],
+                ':sinopse' => $_POST["sinopse"],
                 ':id' => $_POST['id']
             );
             $query = "
+
+
    UPDATE sample 
-   SET filme = :filme, diretor = :diretor 
+   SET filme = :filme, diretor = :diretor, genero = :genero , avaliacao = :avaliacao , sinopse = :sinopse  
    WHERE id = :id
    ";
             $statement = $this->connect->prepare($query);
@@ -144,5 +155,8 @@ class API
     }
 
 
+
 }
+
+
 

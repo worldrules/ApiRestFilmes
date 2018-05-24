@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "description": "teste",
+  "minimum-stability": "stable",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Leonardo Carvalho",
+      "email": "worldrulesdev@gmail.com"
+    }
+  ]
+}

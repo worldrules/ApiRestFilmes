@@ -52,7 +52,7 @@ if(isset($_POST['action'])) {
     {
         $id = $_POST["id"];
         //$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=fetch_single&id=".$id."";
-        $api_url = "http://apirestcinema.herokuapp.com/API/test_api.php?action=fetch_single&id=".$id."";
+        $api_url = "apirestcinema.herokuapp.com/API/test_api.php?action=fetch_single&id=".$id."";
         
         $client = curl_init($api_url);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
@@ -71,7 +71,7 @@ if(isset($_POST['action'])) {
             'id'   => $_POST['hidden_id']
         );
         //$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=update";
-        $api_url = "http://apirestcinema.herokuapp.com/API/test_api.php?action=update";
+        $api_url = "apirestcinema.herokuapp.com/API/test_api.php?action=update";
         $client = curl_init($api_url);
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
@@ -99,7 +99,7 @@ if(isset($_POST['action'])) {
         {
             $id = $_POST['id'];
             //$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=delete&id=".$id."";
-            $api_url = "http://apirestcinema.herokuapp.com/API/test_api.php?action=delete&id=".$id."";
+            $api_url = "apirestcinema.herokuapp.com/API/test_api.php?action=delete&id=".$id."";
             $client = curl_init($api_url);
             curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
             $response = curl_exec($client);

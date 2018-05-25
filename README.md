@@ -11,7 +11,8 @@ Sobre o APP em sí:
 
 - CRUD básico para Filmes ! (Create, Read, Update and Delete)
 - Usando REST ( Representational State Transfer )
+- Banco de Dados MySQL
 
 
 
-Para iniciantes: Foi usado somente PHP , e servidor APACHE com XAMPP. Hospedagem cloud com HEROKU.
+Para iniciantes: Foi usado somente PHP , e servidor APACHE com XAMPP. Hospedagem cloud com HEROKU, Banco de Dados MySQL.

@@ -16,3 +16,32 @@ Sobre o APP em sí:
 
 
 Para iniciantes: Foi usado somente PHP , e servidor APACHE com XAMPP. Hospedagem cloud com HEROKU, Banco de Dados MySQL.
+
+
+
+Possível Solução para o Problema do HackerRank - >
+
+<?php
+
+$handle = fopen("php://stdin","r");
+
+$n = intval(fgets($handle));
+
+
+for ($rows = 0; $rows < $n; $rows++) {
+
+    for ($columns = 0; $columns < $n - $rows - 1; $columns++) {
+
+        echo " ";
+    }
+
+    for ($columns = 0; $columns < $rows + 1; $columns++) {
+
+        echo "#";
+    }
+
+echo "\n";
+
+}
+
+?>

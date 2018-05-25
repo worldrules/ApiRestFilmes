@@ -23,7 +23,7 @@ if(isset($_POST['action'])) {
 
 
         //$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=insert";
-        $api_url = "http://apirestcinema.herokuapp.com/API/test_api.php?action=insert";
+        $api_url = "apirestcinema.herokuapp.com/API/test_api.php?action=insert";
 
         $client = curl_init($api_url);
 

@@ -21,7 +21,7 @@ Para iniciantes: Foi usado somente PHP , e servidor APACHE com XAMPP. Hospedagem
 
 Possível Solução para o Problema do HackerRank - >
 
-<?php
+
 
 $handle = fopen("php://stdin","r");
 
@@ -44,4 +44,4 @@ echo "\n";
 
 }
 
-?>
+

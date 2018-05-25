@@ -19,7 +19,8 @@ class API
     function database_connection()
     {
 
-        $this->connect = new PDO("mysql:host=localhost;dbname=filmes", "root", "");
+        $this->connect = new PDO("mysql:host=ec2-54-83-204-6.compute-1.amazonaws.com
+;dbname=dfumn4ge9ot7ce", "elqlhedwlzqxql", "f8a980fdde404dba4c55c3a687d6c9039e7d63baf1bf9cb33782e25f795e38b8");
     }
 
 

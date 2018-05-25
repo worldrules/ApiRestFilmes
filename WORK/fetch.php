@@ -6,7 +6,8 @@
  * Time: 09:47
  */
 
-$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=fetch_all";
+//$api_url = "http://localhost/ApiRestFilmes/API/test_api.php?action=fetch_all";
+$api_url = "apirestcinema.herokuapp.com/API/test_api.php?action=fetch_all";
 
 $client = curl_init($api_url);
 

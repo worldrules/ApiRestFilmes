@@ -1,7 +1,7 @@
 # ApiRestFilmes
 
 
-#http://apirestcinema.herokuapp.com/WORK/
+http://apirestcinema.herokuapp.com/WORK/
 
 Teste Realizado para Empresa
 
